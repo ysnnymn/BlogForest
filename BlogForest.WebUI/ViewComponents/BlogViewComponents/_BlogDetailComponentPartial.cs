@@ -3,19 +3,18 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace BlogForest.WebUI.ViewComponents.BlogViewComponents
 {
-    public class _BlogListComponentPartial:ViewComponent
+    public class _BlogDetailComponentPartial:ViewComponent
     {
         private readonly IBlogService _blogService;
 
-        public _BlogListComponentPartial(IBlogService blogService)
+        public _BlogDetailComponentPartial(IBlogService blogService)
         {
             _blogService = blogService;
         }
-
-        public IViewComponentResult Invoke()
+        public IViewComponentResult Invoke(int id)
         {
-            var values = _blogService.TGetBlogsWithCategoryandUser();
-            return View(values);
+            var value = _blogService.TGetById(id);
+            return View(value);
         }
     }
 }

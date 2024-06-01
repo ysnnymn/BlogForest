@@ -3,6 +3,7 @@ using BlogForest.BusinessLayer.Concrete;
 using BlogForest.DataAccessLayer.Abstract;
 using BlogForest.DataAccessLayer.Context;
 using BlogForest.DataAccessLayer.EntityFramework;
+using BlogForest.EntityLayer.Concrete;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,6 +11,11 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<BlogContext>();
 builder.Services.AddScoped<IBlogService, BlogManager>();
 builder.Services.AddScoped<IBlogDal, EfBlogDal>();
+builder.Services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<BlogContext>();
+
+
+
+
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();

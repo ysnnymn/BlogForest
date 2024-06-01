@@ -7,30 +7,27 @@
                 <div class="blog-box row">
                     <div class="col-md-4">
                         <div class="post-media">
-                            <a href="garden-single.html" title="">
-                                <img src="@item.ThumbnailImageUrl" alt="" class="img-fluid">
+                            <a href="/Blog/BlogDetail/@item.BlogId" title="">
+                                <img src="@item.ThumbnailImageUrl" alt="" class="img-fluid standard-img">
                                 <div class="hovereffect"></div>
                             </a>
                         </div><!-- end media -->
                     </div><!-- end col -->
 
                     <div class="blog-meta big-meta col-md-8">
-                        <span class="bg-aqua"><a href="garden-category.html" title="">@item.CategoryId</a></span>
-                        <h4><a href="garden-single.html" title=""></a><p>@item.Description</p></h4>
+                        <span class="bg-aqua"><a href="garden-category.html" title="">@item.Category.CategoryName</a></span>
+                        <h4><a href="/Blog/BlogDetail/@item.BlogId" title=""></a><p>@item.Title</p></h4>
+                       
+                        <p>@Html.Raw(item.Description.Length > 400 ? item.Description.Substring(0, 400) + "..." : item.Description)</p>
                         <small><a href="garden-category.html" title=""><i class="fa fa-eye"></i> @item.ViewCount</a></small>
-                        <small><a href="garden-single.html" title="">@item.CreatedDate.ToString("dd-MMM-yyy")</a></small>
-                        <small><a href="#" title="">@item.AppUserId</a></small>
-                    </div><!-- end meta -->
+                        <small><a href="garden-single.html" title="">@item.CreatedDate.ToString("dd-MMM-yyyy")</a></small>
+                        <small><a href="#" title="">@item.AppUser.Name @item.AppUser.Surname</a></small>
+                    </div>
                 </div>
-
-                <!-- end blog-box -->
 
                 <hr class="invis">
             }
-           
-
-            
-        </div><!-- end blog-list -->
+        </div>
     </div>
 
     <hr class="invis">
@@ -50,3 +47,12 @@
         </div><!-- end col -->
     </div><!-- end row -->
 </div><!-- end col -->
+
+<!-- CSS kurallarını buraya ekleyin -->
+<style>
+.standard-img {
+    width: 200%;
+    height: 200px; /* Standart yüksekliği belirleyin */
+    object-fit: cover; /* Resmin oranlarını koruyarak kırp */
+}
+</style>

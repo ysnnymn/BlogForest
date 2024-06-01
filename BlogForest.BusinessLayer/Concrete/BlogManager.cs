@@ -23,9 +23,14 @@ namespace BlogForest.BusinessLayer.Concrete
             throw new NotImplementedException();
         }
 
+        public List<Blog> TGetBlogsWithCategoryandUser()
+        {
+            return _blogDal.GetBlogsWithCategoryandUser();
+        }
+
         public Blog TGetById(int id)
         {
-            throw new NotImplementedException();
+            return _blogDal.GetById(id);
         }
 
         public List<Blog> TGetListAll()

@@ -33,6 +33,11 @@ namespace BlogForest.BusinessLayer.Concrete
             return _blogDal.GetById(id);
         }
 
+        public List<Blog> TGetLast2BlogByAppUser(int id)
+        {
+            return _blogDal.GetLast2BlogByAppUser(id);
+        }
+
         public List<Blog> TGetListAll()
         {
           return  _blogDal.GetListAll();

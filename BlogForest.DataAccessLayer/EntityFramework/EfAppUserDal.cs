@@ -1,7 +1,6 @@
 ﻿using BlogForest.DataAccessLayer.Abstract;
 using BlogForest.DataAccessLayer.Context;
 using BlogForest.DataAccessLayer.Repositories;
-using BlogForest.DtoLayer.CategoryDtos;
 using BlogForest.EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
@@ -11,20 +10,16 @@ using System.Threading.Tasks;
 
 namespace BlogForest.DataAccessLayer.EntityFramework
 {
-    public class EfCategoryDal : GenericRepository<Category>, ICategoryDal
+    public class EfAppUserDal : GenericRepository<AppUser>, IAppUserDal
     {
-        public EfCategoryDal(BlogContext context) : base(context)
+        public EfAppUserDal(BlogContext context) : base(context)
         {
         }
 
-        public List<ResultCategoryWithCountDto> GetCategoryWithCount()
+        public AppUser GetAppUserDetail(int id)
         {
             var context = new BlogContext();
-            var value = context.Categories.Select(x => new ResultCategoryWithCountDto
-            {
-                CategoryName = x.CategoryName,
-                CategoryCount = x.Blogs.Count
-            }).ToList();
+            var value = context.Blogs.Where(x => x.BlogId == id).Select(y => y.AppUser).FirstOrDefault();
             return value;
         }
     }

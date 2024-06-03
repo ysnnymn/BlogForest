@@ -12,6 +12,10 @@ builder.Services.AddDbContext<BlogContext>();
 builder.Services.AddScoped<IBlogService, BlogManager>();
 builder.Services.AddScoped<IBlogDal, EfBlogDal>();
 builder.Services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<BlogContext>();
+builder.Services.AddScoped<IAppUserService, AppUserManager>();
+builder.Services.AddScoped<IAppUserDal, EfAppUserDal>();
+builder.Services.AddScoped<ICategoryService, CategoryManager>();
+builder.Services.AddScoped<ICategoryDal, EfCategoryDal>();
 
 
 
@@ -32,6 +36,8 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+app.UseAuthentication();
+app.UseAuthorization();
 
 app.UseAuthorization();
 

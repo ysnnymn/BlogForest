@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BlogForest.EntityLayer.Concrete
+namespace BlogForest.DtoLayer.CommentDtos
 {
-    public class Comment
+    public class ResultCommentDto
     {
         public int CommentId { get; set; }
         public string NameSurname { get; set; }
@@ -14,8 +14,7 @@ namespace BlogForest.EntityLayer.Concrete
         public DateTime CommentDate { get; set; }
         public bool Status { get; set; }
         public int BlogId { get; set; }
-        public List<Blog> Blogs { get; set; }
+        public int CommentCount { get; set; }
         public string CommentImageUrl { get; set; }
-
     }
 }

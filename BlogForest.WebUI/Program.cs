@@ -16,6 +16,8 @@ builder.Services.AddScoped<IAppUserService, AppUserManager>();
 builder.Services.AddScoped<IAppUserDal, EfAppUserDal>();
 builder.Services.AddScoped<ICategoryService, CategoryManager>();
 builder.Services.AddScoped<ICategoryDal, EfCategoryDal>();
+builder.Services.AddScoped<ICommentService, CommentManager>();
+builder.Services.AddScoped<ICommentDal, EfCommentDal>();
 
 
 

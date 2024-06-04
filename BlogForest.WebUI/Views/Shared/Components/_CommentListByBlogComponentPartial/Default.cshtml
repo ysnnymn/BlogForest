@@ -1,0 +1,31 @@
+﻿@model List<ResultCommentDto>
+<hr class="invis1">
+  @foreach (var item in Model)
+                {
+<div class="custombox clearfix">
+    <h4 class="small-title">@item.CommentCount Yorum</h4>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="comments-list">
+              
+                    <div class="media">
+                        <a class="media-left" href="#">
+                            <img src="@item.CommentImageUrl" alt="" class="rounded-circle">
+                        </a>
+                        <div class="media-body">
+                            <h4 class="media-heading user_name">@item.NameSurname <small>@item.CommentDate</small></h4>
+                            <p>@item.Detail</p>
+                            <a href="#" class="btn btn-primary btn-sm">Daha Fazla</a>
+                        </div>
+                    </div>
+                    
+             
+             
+               
+            </div>
+        </div><!-- end col -->
+    </div><!-- end row -->
+    </div>
+
+    <!-- end custom-box -->
+}

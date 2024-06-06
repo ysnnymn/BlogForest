@@ -4,6 +4,7 @@ using BlogForest.DataAccessLayer.Abstract;
 using BlogForest.DataAccessLayer.Context;
 using BlogForest.DataAccessLayer.EntityFramework;
 using BlogForest.EntityLayer.Concrete;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,7 +20,7 @@ builder.Services.AddScoped<ICategoryDal, EfCategoryDal>();
 builder.Services.AddScoped<ICommentService, CommentManager>();
 builder.Services.AddScoped<ICommentDal, EfCommentDal>();
 
-
+builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
 
 builder.Services.AddControllersWithViews();
@@ -46,5 +47,13 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllerRoute(
+      name: "areas",
+      pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
+    );
+});
 
 app.Run();

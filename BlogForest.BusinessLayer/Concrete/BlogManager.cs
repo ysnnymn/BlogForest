@@ -23,6 +23,11 @@ namespace BlogForest.BusinessLayer.Concrete
             throw new NotImplementedException();
         }
 
+        public List<Blog> TGetBlogsByAppUser(int id)
+        {
+            return _blogDal.GetBlogsByAppUser(id);
+        }
+
         public List<Blog> TGetBlogsWithCategoryandUser()
         {
             return _blogDal.GetBlogsWithCategoryandUser();
@@ -45,7 +50,7 @@ namespace BlogForest.BusinessLayer.Concrete
 
         public void TInsert(Blog entity)
         {
-            throw new NotImplementedException();
+            _blogDal.Insert(entity);
         }
 
         public void TUpdate(Blog entity)

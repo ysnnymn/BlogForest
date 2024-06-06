@@ -11,5 +11,6 @@ namespace BlogForest.DataAccessLayer.Abstract
     {
         List<Blog> GetBlogsWithCategoryandUser();
         List<Blog> GetLast2BlogByAppUser(int id);
+        List<Blog> GetBlogsByAppUser(int id);
     }
 }

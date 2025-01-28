@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlogForest.EntityLayer", "BlogForest.EntityLayer\BlogForest.EntityLayer.csproj", "{039D6EBB-8028-4235-AD90-D05261E21CB3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlogForest.DataAccessLayer", "BlogForest.DataAccessLayer\BlogForest.DataAccessLayer.csproj", "{9CE769F7-E367-4F06-B5D1-4413F1C4039E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlogForest.BusinessLayer", "BlogForest.BusinessLayer\BlogForest.BusinessLayer.csproj", "{48DC7660-AFEE-4746-BFC2-E1CCE751BF4D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlogForest.WebUI", "BlogForest.WebUI\BlogForest.WebUI.csproj", "{9C42DBE3-31C0-41C1-A95B-25E0B92887CF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{039D6EBB-8028-4235-AD90-D05261E21CB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{039D6EBB-8028-4235-AD90-D05261E21CB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{039D6EBB-8028-4235-AD90-D05261E21CB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{039D6EBB-8028-4235-AD90-D05261E21CB3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9CE769F7-E367-4F06-B5D1-4413F1C4039E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CE769F7-E367-4F06-B5D1-4413F1C4039E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CE769F7-E367-4F06-B5D1-4413F1C4039E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CE769F7-E367-4F06-B5D1-4413F1C4039E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48DC7660-AFEE-4746-BFC2-E1CCE751BF4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48DC7660-AFEE-4746-BFC2-E1CCE751BF4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48DC7660-AFEE-4746-BFC2-E1CCE751BF4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48DC7660-AFEE-4746-BFC2-E1CCE751BF4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9C42DBE3-31C0-41C1-A95B-25E0B92887CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C42DBE3-31C0-41C1-A95B-25E0B92887CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C42DBE3-31C0-41C1-A95B-25E0B92887CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C42DBE3-31C0-41C1-A95B-25E0B92887CF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

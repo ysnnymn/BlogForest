@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlogForest.BusinessLayer", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlogForest.WebUI", "BlogForest.WebUI\BlogForest.WebUI.csproj", "{9C42DBE3-31C0-41C1-A95B-25E0B92887CF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlogForest.DtoLayer", "BlogForest.DtoLayer\BlogForest.DtoLayer.csproj", "{3EDBC211-2347-4725-B09E-7EB00AD12BF2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{9C42DBE3-31C0-41C1-A95B-25E0B92887CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9C42DBE3-31C0-41C1-A95B-25E0B92887CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9C42DBE3-31C0-41C1-A95B-25E0B92887CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EDBC211-2347-4725-B09E-7EB00AD12BF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EDBC211-2347-4725-B09E-7EB00AD12BF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EDBC211-2347-4725-B09E-7EB00AD12BF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EDBC211-2347-4725-B09E-7EB00AD12BF2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

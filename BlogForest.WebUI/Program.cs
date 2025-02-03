@@ -1,6 +1,21 @@
+using BlogForest.BusinessLayer.Abstract;
+using BlogForest.BusinessLayer.Concrete;
+using BlogForest.DataAccessLayer.Abstract;
+using BlogForest.DataAccessLayer.Context;
+using BlogForest.DataAccessLayer.EntityFramework;
+using BlogForest.EntityLayer.Concrete;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddDbContext<BlogContext>();
+builder.Services.AddScoped<IBlogService, BlogManager>();
+builder.Services.AddScoped<IBlogDal,EfBlogDal>();
+builder.Services.AddIdentity<AppUser,AppRole>().AddEntityFrameworkStores<BlogContext>();
+builder.Services.AddScoped<IAppUserService, AppUserManager>();
+builder.Services.AddScoped<IAppUserDal, EfAppUserDal>();
+builder.Services.AddScoped<ICategoryService, CategoryManager>();
+builder.Services.AddScoped<ICategoryDal, EfCategoryDal>();
 builder.Services.AddControllersWithViews();
 
 var app = builder.Build();
@@ -17,6 +32,8 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+
+app.UseAuthentication();
 
 app.UseAuthorization();
 

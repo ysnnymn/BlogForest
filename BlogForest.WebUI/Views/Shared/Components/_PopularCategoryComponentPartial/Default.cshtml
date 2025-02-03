@@ -1,0 +1,13 @@
+@model List<ResultCategoryWithCountDto>
+
+<div class="widget">
+    <h2 class="widget-title">Popüler Kategoriler</h2>
+    <div class="link-widget">
+        <ul>
+            @foreach(var item in Model)
+            {
+                <li><a href="#">@item.CategoryName <span>(@item.CategoryCount)</span></a></li>
+            }         
+        </ul>
+    </div>
+</div>

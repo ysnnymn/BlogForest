@@ -8,6 +8,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\BlogForest.BusinessLayer\BlogForest.BusinessLayer.csproj" />
+      <ProjectReference Include="..\BlogForest.DtoLayer\BlogForest.DtoLayer.csproj" />
     </ItemGroup>
 
     <ItemGroup>
@@ -97,6 +98,11 @@
 
     <ItemGroup>
       <Folder Include="wwwroot\Templates\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Include="wwwroot\Templates\login-form-19\.DS_Store" />
+      <Content Include="wwwroot\Templates\login-form-19\fonts\.DS_Store" />
     </ItemGroup>
 
 </Project>

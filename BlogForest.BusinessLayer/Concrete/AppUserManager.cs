@@ -19,6 +19,11 @@ public class AppUserManager:IAppUserService
         throw new NotImplementedException();
     }
 
+    public void TUpdate(AppUser entity)
+    {
+        throw new NotImplementedException();
+    }
+
     public void TDelete(int id)
     {
         throw new NotImplementedException();

@@ -7,6 +7,8 @@ public interface IBlogDal:IGenericDal<Blog>
     List<Blog> GetBlogsWithCategoryAndUser();
     List<Blog> GetLast2BlogByAppUser(int id);
     List<Blog> GetRecentPosts();
- 
+    List<Blog> GetBlogssByAppUser(int id);
+    void IncreaseBlogViewCount(int id);
+
 
 }

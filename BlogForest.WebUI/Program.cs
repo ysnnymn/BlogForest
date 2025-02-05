@@ -1,3 +1,4 @@
+using System.Reflection;
 using BlogForest.BusinessLayer.Abstract;
 using BlogForest.BusinessLayer.Concrete;
 using BlogForest.DataAccessLayer.Abstract;
@@ -16,7 +17,9 @@ builder.Services.AddScoped<IAppUserService, AppUserManager>();
 builder.Services.AddScoped<IAppUserDal, EfAppUserDal>();
 builder.Services.AddScoped<ICategoryService, CategoryManager>();
 builder.Services.AddScoped<ICategoryDal, EfCategoryDal>();
+builder.Services.AddAutoMapper(Assembly.GetExecutingAssembly());
 builder.Services.AddControllersWithViews();
+
 
 var app = builder.Build();
 
@@ -40,5 +43,12 @@ app.UseAuthorization();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllerRoute(
+        name : "areas",
+        pattern : "{area:exists}/{controller=Home}/{action=Index}/{id?}"
+    );
+});
 
 app.Run();

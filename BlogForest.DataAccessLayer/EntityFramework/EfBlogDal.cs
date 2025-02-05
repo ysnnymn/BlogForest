@@ -42,4 +42,19 @@ return values;
         }
     }
 
+    public List<Blog> GetBlogssByAppUser(int id)
+    {
+        var context=new BlogContext();
+        var values=context.Blogs.Where(x=>x.AppUserId==id).Include(y=>y.Category).ToList();
+        return values;
+    }
+
+    public void IncreaseBlogViewCount(int id)
+    {
+        var context=new BlogContext();
+        var value=context.Blogs.Where(x=>x.BlogId==id).FirstOrDefault();
+        value.ViewCount++;
+        context.Blogs.Update(value);
+        context.SaveChanges();
+    }
 }

@@ -1,0 +1,30 @@
+@model List<Blog>
+
+@{
+    ViewData["Title"] = "MyBlogList";
+    Layout = "~/Areas/User/Views/Shared/_UserLayout.cshtml";
+}
+
+<h2>Size Ait Bloglar</h2>
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Blog Başlığı</th>
+        <th>Kategori</th>
+        <th>Tarih</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.BlogId</td>
+            <td>@item.Title</td>
+            <td>@item.Category.CategoryName</td>
+            <td>@item.CreatedDate.ToString("dd-MMM-yyyy")</td>
+            <td><a href="/User/Blog/DeleteBlog/@item.BlogId" class="btn btn-danger">Sil</a></td>
+            <td><a href="/User/Blog/UpdateBlog/@item.BlogId" class="btn btn-success">Güncelle</a></td>
+        </tr>
+    }
+</table>
+<a href="/User/Blog/CreateBlog/" class="btn btn-primary">Yeni Blog Girişi</a>

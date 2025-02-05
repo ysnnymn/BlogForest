@@ -19,6 +19,11 @@ public class CategoryManager:ICategoryService
         throw new NotImplementedException();
     }
 
+    public void TUpdate(Category entity)
+    {
+        throw new NotImplementedException();
+    }
+
     public void TDelete(int id)
     {
         throw new NotImplementedException();

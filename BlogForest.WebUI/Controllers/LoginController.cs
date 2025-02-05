@@ -27,7 +27,8 @@ public class LoginController : Controller
         var result=await _signInManager.PasswordSignInAsync(createLoginDto.UserName, createLoginDto.Password, false, false);
         if (result.Succeeded)
         {
-            return RedirectToAction("Index", "Profile");
+            return RedirectToAction("MyBlogList", "Blog", new { area = "User" });
+
         }
         return View();
     }

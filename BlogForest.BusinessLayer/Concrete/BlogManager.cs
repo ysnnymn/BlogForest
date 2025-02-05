@@ -18,9 +18,14 @@ public class BlogManager:IBlogService
         _blogDal.Insert(entity);
     }
 
+    public void TUpdate(Blog entity)
+    {
+        _blogDal.Update(entity);
+    }
+
     public void TDelete(int id)
     {
-        throw new NotImplementedException();
+        _blogDal.Delete(id);
     }
 
     public Blog TGetById(int id)
@@ -46,5 +51,15 @@ public class BlogManager:IBlogService
     public List<Blog> TGetRecentPosts()
     {
        return _blogDal.GetRecentPosts();
+    }
+
+    public List<Blog> TGetBlogssByAppUser(int id)
+    {
+        return _blogDal.GetBlogssByAppUser(id);
+    }
+
+    public void TIncreaseBlogViewCount(int id)
+    {
+        _blogDal.IncreaseBlogViewCount(id);
     }
 }

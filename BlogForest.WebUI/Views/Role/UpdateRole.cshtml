@@ -1,0 +1,16 @@
+@model UpdateRoleViewModel
+
+@{
+    ViewData["Title"] = "UpdateRole";
+    Layout = "~/Areas/User/Views/Shared/_UserLayout.cshtml";
+}
+
+<h2>Yeni Rol Ekleme</h2>
+<form method="post">
+    <input type="hidden" asp-for="RoleId"/>
+    
+    <label>Rol Adı</label>
+    <input type="text" asp-for="RoleName"class="form-control">
+    <br/>
+    <button class="btn btn-primary">Güncelle</button>
+</form>

@@ -15,6 +15,7 @@ public class BlogController : Controller
 
     public IActionResult BlogDetail(int id)
     {
+        _blogService.TIncreaseBlogViewCount(id) ;
         ViewBag.i = id;
         return View();
     }
